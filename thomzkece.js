@@ -1042,6 +1042,18 @@ reply('Successfully Disabling Antilink In This Group')
 } else { reply('Kata kunci tidak ditemukan!') }
 }
 break
+case 'remini':
+			case 'hd': {
+			if (!isOwner) return reply(`Ngapain ? Fitur Ini Buat Yg punya bot`)
+			if (!quoted) return reply(`Fotonya Mana?`)
+			if (!/image/.test(mime)) return reply(`Send/Reply Foto Dengan Caption ${prefix + command}`)
+			reply(mess.wait)
+			let media = await quoted.download()
+			let proses = await remini(media, "enhance");
+			haikal.sendMessage(m.chat, { image: proses, caption: '🍁 Ini Hasilnya Kak...'}, { quoted: m})
+			await sleep(5000)
+			}
+			break
 case "tts": case "gtts":{
 if (!q) return reply(` contoh : ${prefix+command} yamate kudasai`)
 reply(mess.wait)
