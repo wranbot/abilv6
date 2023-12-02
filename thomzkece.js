@@ -1342,10 +1342,10 @@ if (/image/.test(mime)) {
 media = await haikal.downloadAndSaveMediaMessage(quoted)
 mem = await uptotelegra(media)
 await haikal.sendMessage(men, { image: { url: mem }, caption: global.tekspushkonv2 })
-await sleep(25000)
+await sleep(10000)
 } else {
 await haikal.sendMessage(men, { text: global.tekspushkonv2 })
-await sleep(25000)
+await sleep(10000)
 }
 }
 reply("File Kontak Sudah Di Kirim Lewat Chat Pribadi")
